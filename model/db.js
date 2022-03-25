@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const user = require('../varification/model/user.js')
 mongoose.connect('mongodb://localhost:27017/Msg', {
 
     useNewUrlParser: true,
@@ -9,9 +10,8 @@ mongoose.connect('mongodb://localhost:27017/Msg', {
     console.log("Connection Fail");
 })
 const chatSchema = new mongoose.Schema({
-    name:{
-        type:String,
-        required:true
+    users:{
+        type:String
 
     },
     msg: {
